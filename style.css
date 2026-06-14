@@ -60,10 +60,6 @@ h2 {
   color: hsl(0, 0%, 100%);
 }
 
-.category {
-  color: hsl(224, 30%, 27%);
-}
-
 .marks {
   margin-bottom: 2rem;
   display: flex;
@@ -122,6 +118,7 @@ p {
 }
 
 .category {
+  color: hsl(224, 30%, 27%);
   display: flex;
   align-items: center;
   justify-content: space-between;
