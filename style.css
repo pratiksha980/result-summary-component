@@ -3,54 +3,69 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* 1. Establish the 10px baseline */
+html {
+  font-size: 62.5%;
+}
+
 @font-face {
   font-family: "HankenGrotesk", sans-serif;
   src: url(han.ttf) format("truetype");
 }
+
 body {
   font-family: "HankenGrotesk", sans-serif;
-
   background-color: hsl(221, 100%, 96%);
+  font-size: 1.6rem;
 }
+
+/* --- MOBILE BASE STYLES --- */
+
 .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 25px;
+  padding: 2.5rem;
 }
+
 .sub-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 375px;
+  max-width: 37.5rem; /* 375px mobile default */
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: 3.2rem;
   background-color: #ffffff;
 }
 
 .result-container {
-  border-radius: 32px;
+  border-radius: 3.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 25px;
+  padding: 2.5rem;
   background-image: linear-gradient(hsla(252, 100%, 67%), hsla(241, 81%, 54%));
 }
+
 h1 {
   margin-bottom: 0;
   color: hsl(0, 0%, 100%);
 }
+
 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   color: hsl(0, 0%, 100%);
 }
+
 .category {
   color: hsl(224, 30%, 27%);
 }
+
 .marks {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,94 +74,111 @@ h2 {
     hsla(256, 72%, 46%, 1),
     hsla(241, 72%, 46%, 0)
   );
-  width: 140px;
-  height: 140px;
+  width: 14rem;
+  height: 14rem;
   border-radius: 50%;
 }
 
-@media (min-width: 600px) {
-  .sub-container {
-    flex-direction: row;
-    width: 100%;
-    max-width: 600px;
-  }
-  .result-container,
-  .summary-container {
-    flex: 1;
-    width: 50%;
-  }
-}
 .reactn {
   color: hsl(0, 100%, 67%);
 }
+
 .mem {
   color: hsl(39, 100%, 56%);
 }
+
 .verbal {
   color: hsl(166, 100%, 37%);
 }
+
 .visual {
   color: hsl(234, 85%, 45%);
 }
+
 h3 {
   color: hsla(224, 30%, 27%);
 }
+
 p {
   color: hsl(241, 100%, 89%);
   margin-top: 0;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
+
 .result-title {
   color: hsl(241, 100%, 89%);
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
+
 .summary-container {
-  border-bottom-left-radius: 32px; /* Matches base card shapes */
-  border-bottom-right-radius: 32px;
-  border-radius: 0px;
+  border-bottom-left-radius: 3.2rem;
+  border-bottom-right-radius: 3.2rem;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 1.4rem;
   background-color: hsl(0, 0%, 100%);
-  padding: 25px;
+  padding: 2.5rem;
 }
+
 .category {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px;
+  padding: 1.2rem;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 1rem;
   background-color: hsl(221, 100%, 96%);
 }
+
 button {
   color: hsl(0, 0%, 100%);
-  margin-top: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   width: 100%;
   border: none;
   background-color: hsl(224, 30%, 27%);
-  padding: 9px 18px;
-  border-radius: 20px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 2rem;
 }
+
 .no {
   color: black;
 }
+
 button:active {
   transform: scale(0.95);
 }
+
 button:hover {
   background-color: hsl(241, 81%, 54%);
 }
+
 .cat-name {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.6rem;
 }
+
 .summary {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
-button {
-  margin-bottom: 20px;
+
+/* --- DESKTOP MEDIA QUERY (PLUGGED AT THE VERY BOTTOM) --- */
+@media (min-width: 37.5rem) {
+  /* Triggers at 600px width */
+  .sub-container {
+    flex-direction: row;
+    width: 100%;
+    max-width: 73.6rem; /* Gives component comfortable room layout sideways */
+  }
+
+  .result-container {
+    flex: 1;
+  }
+
+  .summary-container {
+    flex: 1;
+  }
 }
